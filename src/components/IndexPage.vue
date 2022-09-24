@@ -74,8 +74,8 @@ export default {
       let requestJoke = await fetch("https://official-joke-api.appspot.com/jokes/programming/random");
       let response = await requestJoke.json();
       this.talkQoobee(response[0].setup, "male");
-      setTimeout(() => this.talkQoobee(response[0].punchline, "male"), 6000);
-      setTimeout(() => this.talkQoobee("You are funny! I love you, love!", "female"), 6000);
+      await setTimeout(() => this.talkQoobee(response[0].punchline, "male"), 6000);
+      await setTimeout(() => this.talkQoobee("You are funny! I love you, love!", "female"), 6000);
       this.speechEnded = true;
     }
   }
