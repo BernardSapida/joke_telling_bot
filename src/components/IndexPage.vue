@@ -53,13 +53,8 @@ export default {
 
       this.speechEnded = false;
 
-      if(gender == "") return
-
-      if(gender == "female") {
-        this.femaleMessage = grammar;
-      } else {
-        this.maleMessage = grammar;
-      }
+      if(gender == "female") this.femaleMessage = grammar;
+      else this.maleMessage = grammar;
 
       toSay.voice = this.voiceList[95]
       this.synth.speak(toSay);
