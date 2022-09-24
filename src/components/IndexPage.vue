@@ -48,7 +48,7 @@ export default {
     }
   },
   methods: {
-    async talkQoobee(grammar, gender) {
+    talkQoobee(grammar, gender) {
       const toSay = new SpeechSynthesisUtterance(grammar);
 
       this.speechEnded = false;
@@ -73,10 +73,11 @@ export default {
     async randomJokes() {
       let requestJoke = await fetch("https://official-joke-api.appspot.com/jokes/programming/random");
       let response = await requestJoke.json();
-      await this.talkQoobee(response[0].setup, "male");
-      await this.talkQoobee(response[0].punchline, "male");
-      await this.talkQoobee("You are funny! I love you, love!", "female");
-      // this.speechEnded = true;
+      this.talkQoobee(response[0].setup, "male");
+      setTimeout(() => this.talkQoobee(response[0].punchline, "male"), 6000);
+      setTimeout(() => this.talkQoobee(response[0].punchline, "male"), 6000);
+      setTimeout(() => this.talkQoobee("You are funny! I love you, love!", "female"), 6000);
+      this.speechEnded = true;
     }
   }
 }
