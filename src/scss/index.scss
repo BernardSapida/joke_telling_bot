@@ -1,10 +1,65 @@
 div#app {
-    display: grid;
     height: 100vh;
     width: 100%;
-    place-items: center;
-    background-color: hsl(64, 100%, 97%);
+    background-color: hsl(48, 100%, 93%);
 
     & div.container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        & select {
+            display: block;
+            width: 350px;
+        }
+
+        & .row {
+            width: 100%;
+
+            & .col-6 {
+                & .qoobee_joke, & .qoobee_question {
+                    position: relative;
+                    margin: auto;
+                    max-width: 350px;
+                    height: auto;
+                    width: max-content;
+                    background-color: hsl(46, 100%, 49%);
+                    z-index: 3;
+
+                    & p {
+                        color: hsl(48, 100%, 93%);
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -80px;
+                        left: 40px;
+                        height: 0;
+                        width: 0;
+                        border-top: 50px hsl(46, 100%, 49%) solid;
+                        border-right: 30px transparent solid;
+                        border-left: 30px transparent solid;
+                        border-bottom: 50px transparent solid;
+                        z-index: -1;
+                    }
+                }
+
+                & img {
+                    margin: auto;
+                    display: block;
+                }
+
+                & button.askQuestion {
+                    background-color: hsl(46, 100%, 49%);
+                    color: hsl(48, 100%, 93%);
+                    font-weight: 600;
+
+                    &:hover {
+                        background-color: hsl(46, 100%, 59%);
+                    }
+                }
+            }
+        }
     }
 }

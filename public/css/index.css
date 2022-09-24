@@ -1,7 +1,56 @@
 div#app {
-  display: grid;
   height: 100vh;
   width: 100%;
-  place-items: center;
-  background-color: hsl(64deg, 100%, 97%);
+  background-color: hsl(48deg, 100%, 93%);
+}
+div#app div.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+div#app div.container select {
+  display: block;
+  width: 350px;
+}
+div#app div.container .row {
+  width: 100%;
+}
+div#app div.container .row .col-6 .qoobee_joke, div#app div.container .row .col-6 .qoobee_question {
+  position: relative;
+  margin: auto;
+  max-width: 350px;
+  height: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: hsl(46deg, 100%, 49%);
+  z-index: 3;
+}
+div#app div.container .row .col-6 .qoobee_joke p, div#app div.container .row .col-6 .qoobee_question p {
+  color: hsl(48deg, 100%, 93%);
+}
+div#app div.container .row .col-6 .qoobee_joke::after, div#app div.container .row .col-6 .qoobee_question::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: 40px;
+  height: 0;
+  width: 0;
+  border-top: 50px hsl(46deg, 100%, 49%) solid;
+  border-right: 30px transparent solid;
+  border-left: 30px transparent solid;
+  border-bottom: 50px transparent solid;
+  z-index: -1;
+}
+div#app div.container .row .col-6 img {
+  margin: auto;
+  display: block;
+}
+div#app div.container .row .col-6 button.askQuestion {
+  background-color: hsl(46deg, 100%, 49%);
+  color: hsl(48deg, 100%, 93%);
+  font-weight: 600;
+}
+div#app div.container .row .col-6 button.askQuestion:hover {
+  background-color: hsl(46deg, 100%, 59%);
 }/*# sourceMappingURL=index.css.map */
