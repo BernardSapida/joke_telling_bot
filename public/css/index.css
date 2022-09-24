@@ -1,0 +1,7 @@
+div#app {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  place-items: center;
+  background-color: hsl(64deg, 100%, 97%);
+}/*# sourceMappingURL=index.css.map */

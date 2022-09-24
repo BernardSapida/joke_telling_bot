@@ -1,0 +1,10 @@
+div#app {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    place-items: center;
+    background-color: hsl(64, 100%, 97%);
+
+    & div.container {
+    }
+}
