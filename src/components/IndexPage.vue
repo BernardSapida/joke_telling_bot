@@ -75,7 +75,6 @@ export default {
       let response = await requestJoke.json();
       this.talkQoobee(response[0].setup, "male");
       setTimeout(() => this.talkQoobee(response[0].punchline, "male"), 6000);
-      setTimeout(() => this.talkQoobee(response[0].punchline, "male"), 6000);
       setTimeout(() => this.talkQoobee("You are funny! I love you, love!", "female"), 6000);
       this.speechEnded = true;
     }
